@@ -51,4 +51,10 @@ class CalculatorSuite extends FunSuite with ShouldMatchers {
     assert(resultRed2() == "red")
   }
 
+  test("computeSolutions from Polynomial") {
+    val sol1 = Polynomial.computeSolutions(Var(4), Var(4), Var(1),
+      Var(Math.sqrt(Polynomial.computeDelta(Var(4), Var(4), Var(1))())))
+    assert(sol1() == Set(-0.5))
+  }
+
 }
