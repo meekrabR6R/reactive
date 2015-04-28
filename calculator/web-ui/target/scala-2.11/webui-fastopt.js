@@ -858,6 +858,71 @@ var $h_Lcalculator_Expr = (function() {
 });
 $h_Lcalculator_Expr.prototype = $c_Lcalculator_Expr.prototype;
 /** @constructor */
+var $c_Lcalculator_Polynomial$ = (function() {
+  $c_O.call(this)
+});
+$c_Lcalculator_Polynomial$.prototype = new $h_O();
+$c_Lcalculator_Polynomial$.prototype.constructor = $c_Lcalculator_Polynomial$;
+/** @constructor */
+var $h_Lcalculator_Polynomial$ = (function() {
+  /*<skip>*/
+});
+$h_Lcalculator_Polynomial$.prototype = $c_Lcalculator_Polynomial$.prototype;
+$c_Lcalculator_Polynomial$.prototype.computeSolutions__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal = (function(a, b, c, delta) {
+  var expr = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(a$2, b$2, c$2) {
+    return (function() {
+      var jsx$4 = $uD(b$2.apply__O());
+      var a$1 = $uD($m_Lcalculator_Polynomial$().computeDelta__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal(a$2, b$2, c$2).apply__O());
+      var jsx$3 = $uD($g["Math"]["sqrt"](a$1));
+      var jsx$2 = $uD(a$2.apply__O());
+      var jsx$1 = $uD(b$2.apply__O());
+      var a$3 = $uD($m_Lcalculator_Polynomial$().computeDelta__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal(a$2, b$2, c$2).apply__O());
+      var array = [(((-jsx$4) + jsx$3) / (2 * jsx$2)), (((-jsx$1) - $uD($g["Math"]["sqrt"](a$3))) / (2 * $uD(a$2.apply__O())))];
+      if (($uI(array["length"]) === 0)) {
+        var jsx$5 = $m_sci_Set$EmptySet$()
+      } else {
+        var b$1 = new $c_scm_SetBuilder().init___sc_Set($m_sci_Set$EmptySet$());
+        matchEnd4: {
+          var i = 0;
+          var len = $uI(array["length"]);
+          while ((i < len)) {
+            var index = i;
+            var arg1 = array[index];
+            b$1.$$plus$eq__O__scm_SetBuilder(arg1);
+            i = ((1 + i) | 0)
+          };
+          break matchEnd4
+        };
+        var jsx$5 = $as_sc_GenTraversable(b$1.elems$1)
+      };
+      return $as_sci_Set(jsx$5)
+    })
+  })(a, b, c));
+  return new $c_Lcalculator_Var().init___F0(expr)
+});
+$c_Lcalculator_Polynomial$.prototype.computeDelta__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal = (function(a, b, c) {
+  var expr = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(a$1, b$1, c$1) {
+    return (function() {
+      return (($uD(b$1.apply__O()) * $uD(b$1.apply__O())) - ((4 * $uD(a$1.apply__O())) * $uD(c$1.apply__O())))
+    })
+  })(a, b, c));
+  return new $c_Lcalculator_Var().init___F0(expr)
+});
+var $d_Lcalculator_Polynomial$ = new $ClassTypeData({
+  Lcalculator_Polynomial$: 0
+}, false, "calculator.Polynomial$", {
+  Lcalculator_Polynomial$: 1,
+  O: 1
+});
+$c_Lcalculator_Polynomial$.prototype.$classData = $d_Lcalculator_Polynomial$;
+var $n_Lcalculator_Polynomial$ = (void 0);
+var $m_Lcalculator_Polynomial$ = (function() {
+  if ((!$n_Lcalculator_Polynomial$)) {
+    $n_Lcalculator_Polynomial$ = new $c_Lcalculator_Polynomial$().init___()
+  };
+  return $n_Lcalculator_Polynomial$
+});
+/** @constructor */
 var $c_Lcalculator_Signal = (function() {
   $c_O.call(this);
   this.calculator$Signal$$myExpr$1 = null;
@@ -1031,6 +1096,18 @@ $c_Lcalculator_TweetLength$.prototype.tweetRemainingCharsCount__Lcalculator_Sign
     })
   })(tweetText));
   return new $c_Lcalculator_Signal().init___F0(expr)
+});
+$c_Lcalculator_TweetLength$.prototype.colorForRemainingCharsCount__Lcalculator_Signal__Lcalculator_Signal = (function(remainingCharsCount) {
+  var expr = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(remainingCharsCount$1) {
+    return (function() {
+      var x1 = $uI(remainingCharsCount$1.apply__O());
+      switch (x1) {
+        default:
+          return ((x1 >= 15) ? "green" : (((x1 >= 0) && (x1 <= 14)) ? "orange" : "red"));
+      }
+    })
+  })(remainingCharsCount));
+  return new $c_Lcalculator_Var().init___F0(expr)
 });
 var $d_Lcalculator_TweetLength$ = new $ClassTypeData({
   Lcalculator_TweetLength$: 0
@@ -5454,7 +5531,14 @@ $c_Lcalculator_CalculatorUI$.prototype.setupTweetMeasurer__V = (function() {
     })
   })(remainingCharsArea, remainingCount));
   new $c_Lcalculator_Signal().init___F0(expr);
-  $m_s_Predef$().$$qmark$qmark$qmark__sr_Nothing$()
+  var color = $m_Lcalculator_TweetLength$().colorForRemainingCharsCount__Lcalculator_Signal__Lcalculator_Signal(remainingCount);
+  $m_Lcalculator_Signal$();
+  var expr$1 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(remainingCharsArea$1$1, color$1) {
+    return (function() {
+      remainingCharsArea$1$1["style"]["color"] = $as_T(color$1.apply__O())
+    })
+  })(remainingCharsArea, color));
+  new $c_Lcalculator_Signal().init___F0(expr$1)
 });
 $c_Lcalculator_CalculatorUI$.prototype.init___ = (function() {
   $n_Lcalculator_CalculatorUI$ = this;
@@ -5587,10 +5671,28 @@ $c_Lcalculator_CalculatorUI$.prototype.setup2ndOrderPolynomial__V = (function() 
     };
     throw new $c_s_MatchError().init___O(doubleValues)
   };
-  $as_Lcalculator_Signal(x$1_$_$$und1$1);
-  $as_Lcalculator_Signal(x$1_$_$$und2$1);
-  $as_Lcalculator_Signal(x$1_$_$$und3$1);
-  $m_s_Predef$().$$qmark$qmark$qmark__sr_Nothing$()
+  var a$2 = $as_Lcalculator_Signal(x$1_$_$$und1$1);
+  var b$2$1 = $as_Lcalculator_Signal(x$1_$_$$und2$1);
+  var c$2 = $as_Lcalculator_Signal(x$1_$_$$und3$1);
+  var delta = $m_Lcalculator_Polynomial$().computeDelta__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal(a$2, b$2$1, c$2);
+  var deltaArea = this.elementById__T__sjs_js_Any("polyrootdelta");
+  $m_Lcalculator_Signal$();
+  var expr = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(delta$1, deltaArea$1) {
+    return (function() {
+      deltaArea$1["textContent"] = $objectToString(delta$1.apply__O())
+    })
+  })(delta, deltaArea));
+  new $c_Lcalculator_Signal().init___F0(expr);
+  var solutions = $m_Lcalculator_Polynomial$().computeSolutions__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal__Lcalculator_Signal(a$2, b$2$1, c$2, delta);
+  var solutionsArea = this.elementById__T__sjs_js_Any("polyrootsolutions");
+  $m_Lcalculator_Signal$();
+  var expr$1 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(solutions$1, solutionsArea$1) {
+    return (function() {
+      var this$15 = $as_sc_SetLike(solutions$1.apply__O());
+      solutionsArea$1["textContent"] = $s_sc_TraversableLike$class__toString__sc_TraversableLike__T(this$15)
+    })
+  })(solutions, solutionsArea));
+  new $c_Lcalculator_Signal().init___F0(expr$1)
 });
 $c_Lcalculator_CalculatorUI$.prototype.parseSimple$1__p1__T__Lcalculator_Expr = (function(text) {
   var this$2 = new $c_sci_StringOps().init___T(text);
@@ -14940,6 +15042,18 @@ var $isArrayOf_sc_LinearSeqOptimized = (function(obj, depth) {
 });
 var $asArrayOf_sc_LinearSeqOptimized = (function(obj, depth) {
   return (($isArrayOf_sc_LinearSeqOptimized(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.collection.LinearSeqOptimized;", depth))
+});
+var $is_sc_SetLike = (function(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.sc_SetLike)))
+});
+var $as_sc_SetLike = (function(obj) {
+  return (($is_sc_SetLike(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.collection.SetLike"))
+});
+var $isArrayOf_sc_SetLike = (function(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.sc_SetLike)))
+});
+var $asArrayOf_sc_SetLike = (function(obj, depth) {
+  return (($isArrayOf_sc_SetLike(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.collection.SetLike;", depth))
 });
 /** @constructor */
 var $c_sc_AbstractIterable = (function() {
