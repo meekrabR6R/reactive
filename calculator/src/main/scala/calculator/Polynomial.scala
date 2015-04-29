@@ -8,7 +8,8 @@ object Polynomial {
 
   def computeSolutions(a: Signal[Double], b: Signal[Double],
       c: Signal[Double], delta: Signal[Double]): Signal[Set[Double]] = {
-    Var(Set(((- b()) + delta()) / (2 * a()),
-            ((-b()) - delta()) / (2 * a())))
+    val denom = Var(2 * a())
+    Var(Set(((- b()) + delta()) / denom(),
+            ((-b()) - delta()) / denom()))
   }
 }

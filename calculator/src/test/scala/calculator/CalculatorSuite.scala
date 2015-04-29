@@ -7,8 +7,6 @@ import org.scalatest.junit.JUnitRunner
 
 import org.scalatest._
 
-import TweetLength.MaxTweetLength
-
 @RunWith(classOf[JUnitRunner])
 class CalculatorSuite extends FunSuite with ShouldMatchers {
 
@@ -21,16 +19,16 @@ class CalculatorSuite extends FunSuite with ShouldMatchers {
 
   test("tweetRemainingCharsCount with a constant signal") {
     val result = TweetLength.tweetRemainingCharsCount(Var("hello world"))
-    assert(result() == MaxTweetLength - tweetLength("hello world"))
+    assert(result() == TweetLength.MaxTweetLength - tweetLength("hello world"))
 
     val tooLong = "foo" * 200
     val result2 = TweetLength.tweetRemainingCharsCount(Var(tooLong))
-    assert(result2() == MaxTweetLength - tweetLength(tooLong))
+    assert(result2() == TweetLength.MaxTweetLength - tweetLength(tooLong))
   }
 
   test("tweetRemainingCharsCount with a supplementary char") {
     val result = TweetLength.tweetRemainingCharsCount(Var("foo blabla \uD83D\uDCA9 bar"))
-    assert(result() == MaxTweetLength - tweetLength("foo blabla \uD83D\uDCA9 bar"))
+    assert(result() == TweetLength.MaxTweetLength - tweetLength("foo blabla \uD83D\uDCA9 bar"))
   }
 
 

@@ -4,7 +4,7 @@
 		module="calculator_2.11"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150425034430"
+		publication="20150429005447"
 	>
 		<description>
 		calculator
@@ -27,7 +27,9 @@
 	</configurations>
 	<publications>
 		<artifact name="calculator_2.11" type="pom" ext="pom" conf="pom"/>
-		<artifact name="calculator_2.11" type="jar" ext="jar" conf="optional" e:classifier="download"/>
+		<artifact name="calculator_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="calculator_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="calculator_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.5" conf="scala-tool->default,optional(default)"/>
