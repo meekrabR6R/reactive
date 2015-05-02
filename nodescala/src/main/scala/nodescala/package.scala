@@ -17,18 +17,21 @@ package object nodescala {
 
     /** Returns a future that is always completed with `value`.
      */
-    def always[T](value: T): Future[T] = ???
+    def always[T](value: T): Future[T] = Promise[T].success(value).future
+
     /** Returns a future that is never completed.
      *
      *  This future may be useful when testing if timeout logic works correctly.
      */
-    def never[T]: Future[T] = ???
+    def never[T]: Future[T] = Promise[T].future
+
     /** Given a list of futures `fs`, returns the future holding the list of values of all the futures from `fs`.
      *  The returned future is completed only once all of the futures in `fs` have been completed.
      *  The values in the list are in the same order as corresponding futures `fs`.
      *  If any of the futures `fs` fails, the resulting future also fails.
      */
     def all[T](fs: List[Future[T]]): Future[List[T]] = ???
+
     /** Given a list of futures `fs`, returns the future holding the value of the future from `fs` that completed first.
      *  If the first completing future in `fs` fails, then the result is failed as well.
      *
