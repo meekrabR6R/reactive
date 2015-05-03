@@ -2,14 +2,15 @@
 [0m[[0minfo[0m] [0m[32m- A Future should always be completed[0m[0m
 [0m[[0minfo[0m] [0m[32m- A Future should never be completed[0m[0m
 [0m[[0minfo[0m] [0m[32m- A Future holding the list of values of all the Futures from a List[Future[T]].[0m[0m
+[0m[[0minfo[0m] [0m[32m- A race beween Futures should return the quickest Future[T][0m[0m
 [0m[[0minfo[0m] [0m[31m- Server should serve requests *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at nodescala.NodeScala$class.start(nodescala.scala:44)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyServer.start(tests.scala:87)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$7.apply$mcV$sp(tests.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$7.apply(tests.scala:102)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$7.apply(tests.scala:102)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyServer.start(tests.scala:92)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$11.apply$mcV$sp(tests.scala:109)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$11.apply(tests.scala:107)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$11.apply(tests.scala:107)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m

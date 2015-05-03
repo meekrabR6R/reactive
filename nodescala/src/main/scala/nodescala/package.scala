@@ -44,7 +44,11 @@ package object nodescala {
      *
      *  may return a `Future` succeeded with `1`, `2` or failed with an `Exception`.
      */
-    def any[T](fs: List[Future[T]]): Future[T] = ???
+    def any[T](fs: List[Future[T]]): Future[T] = {
+      val p = Promise[T]()
+      fs.foreach(f => f.onComplete { p.tryComplete })
+      p.future
+    }
 
     /** Returns a future with a unit value that is completed after time `t`.
      */

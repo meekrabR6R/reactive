@@ -34,11 +34,18 @@ class NodeScalaSuite extends FunSuite {
 
   test("A Future holding the list of values of all the Futures from a List[Future[T]].") {
     val fs = List(Future(1), Future(2), Future(3))
-    Future.all(fs).onComplete(rs => assert(rs.get == List(1,2,3)))
+    val res = Await.result(Future.all(fs), 3000000 nanos)
+    //println(Await.result(Future.all(fs), 3000000 nanos))
+    assert(res == List(1,2,3))
   }
 
-  
-  
+  test("A race beween Futures should return the quickest Future[T]") {
+    val res = Await.result(Future.any(List(Future(blocking { Thread.sleep(1000); 1}),
+                              Future(blocking { Thread.sleep(100); 2 }),
+                              Future(blocking { Thread.sleep(10); 3 }))), 30000000 nanos)
+    assert(res == 3)
+  }
+
   class DummyExchange(val request: Request) extends Exchange {
     @volatile var response = ""
     val loaded = Promise[String]()
