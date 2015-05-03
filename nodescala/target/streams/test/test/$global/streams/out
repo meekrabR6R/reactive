@@ -1,12 +1,12 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(nodescala.NodeScalaSuite, org.scalatest.tools.Framework$$anon$1@320d3cba, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(nodescala.NodeScalaSuite, org.scalatest.tools.Framework$$anon$1@76cd0079, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0mSummary for ScalaCheck not available.[0m
 [0m[[0minfo[0m] [0mScalaTest[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 1 second, 154 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 3 seconds, 166 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 7[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 4, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 6, failed 1, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[31merror[0m] [0mFailed: Total 5, Failed 1, Errors 0, Passed 4[0m
+[0m[[31merror[0m] [0mFailed: Total 7, Failed 1, Errors 0, Passed 6[0m
 [0m[[31merror[0m] [0mFailed tests:[0m
 [0m[[31merror[0m] [0m	nodescala.NodeScalaSuite[0m
 [0m[[31merror[0m] [0m(assignment/test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

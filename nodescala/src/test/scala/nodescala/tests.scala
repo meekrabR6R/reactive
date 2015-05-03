@@ -45,6 +45,27 @@ class NodeScalaSuite extends FunSuite {
                               Future(blocking { Thread.sleep(10); 3 }))), 30000000 nanos)
     assert(res == 3)
   }
+  
+  test("Future.delay have to finish when Await will wait") {
+    val delayFuture = Future.delay(1 second)
+
+    try {
+      Await.result(delayFuture, 2 seconds)
+    } catch {
+      case t: TimeoutException => assert(false, "This should not timed out!")
+    }
+  }
+
+  test("Future.delay can't to finish when Await won't wait") {
+    val delayFuture = Future.delay(2 seconds)
+
+    try {
+      Await.result(delayFuture, 1 second)
+      assert(false, "This should not be here!")
+    } catch {
+      case t: TimeoutException =>
+    }
+  }
 
   class DummyExchange(val request: Request) extends Exchange {
     @volatile var response = ""
