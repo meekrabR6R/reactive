@@ -75,6 +75,19 @@ class NodeScalaSuite extends FunSuite {
     intercept[TimeoutException] { delay.now }
   }
 
+  test("continueWith should wait for the first future to complete") {
+    val delay = Future.delay(1 second)
+    val always = (f: Future[Unit]) => 42
+
+    try {
+      Await.result(delay.continueWith(always), 500 millis)
+      assert(false)
+    }
+    catch {
+      case t: TimeoutException => // ok
+    }
+  }
+
   class DummyExchange(val request: Request) extends Exchange {
     @volatile var response = ""
     val loaded = Promise[String]()
