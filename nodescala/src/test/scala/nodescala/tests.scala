@@ -45,7 +45,7 @@ class NodeScalaSuite extends FunSuite {
                               Future(blocking { Thread.sleep(10); 3 }))), 30000000 nanos)
     assert(res == 3)
   }
-  
+
   test("Future.delay have to finish when Await will wait") {
     val delayFuture = Future.delay(1 second)
 
@@ -65,6 +65,14 @@ class NodeScalaSuite extends FunSuite {
     } catch {
       case t: TimeoutException =>
     }
+  }
+
+  test("Calling 'now' on instances of Future could return the Future's value..") {
+    val f = Future(2)
+    assert(f.now == 2)
+
+    val delay = Future.delay(5 seconds)
+    intercept[TimeoutException] { delay.now }
   }
 
   class DummyExchange(val request: Request) extends Exchange {
@@ -125,6 +133,7 @@ class NodeScalaSuite extends FunSuite {
       l.emit(req)
     }
   }
+
   test("Server should serve requests") {
     val dummy = new DummyServer(8191)
     val dummySubscription = dummy.start("/testDir") {
