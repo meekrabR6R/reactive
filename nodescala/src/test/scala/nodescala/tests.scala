@@ -101,24 +101,20 @@ class NodeScalaSuite extends FunSuite {
     }
   }
 
-  test("run") {
-    val working = Future.run() { ct =>
-      Future {
-        while (ct.nonCancelled) {
-          println("working")
-          Thread.sleep(100)
-        }
-        println("done")
-      }
-    }
-    Future.delay(2 seconds) onSuccess { // (A)
-      case _ => {
-        println("unsubscribing"); working.unsubscribe()
-      }
-    }
+  test("CancellationTokenSource should allow stopping the computation") {
+    val p = Promise[String]()
 
-    Thread.sleep((3 seconds) toMillis)
-    assert(1 == 1)
+    val cts = Future.run() { ct =>
+      async {
+        while (ct.nonCancelled) {
+          // do work
+        }
+
+        p.success("done")
+      }
+    }
+    cts.unsubscribe()
+    assert(Await.result(p.future, 1 second) == "done")
   }
 
   class DummyExchange(val request: Request) extends Exchange {
