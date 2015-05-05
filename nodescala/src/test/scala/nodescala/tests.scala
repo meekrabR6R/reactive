@@ -88,6 +88,39 @@ class NodeScalaSuite extends FunSuite {
     }
   }
 
+  test("continue should wait for the first future to complete") {
+    val delay = Future.delay(1 second)
+    val always = (f: Try[Unit]) => 42
+
+    try {
+      Await.result(delay.continue(always), 500 millis)
+      assert(false)
+    }
+    catch {
+      case t: TimeoutException => // ok
+    }
+  }
+
+  test("run") {
+    val working = Future.run() { ct =>
+      Future {
+        while (ct.nonCancelled) {
+          println("working")
+          Thread.sleep(100)
+        }
+        println("done")
+      }
+    }
+    Future.delay(2 seconds) onSuccess { // (A)
+      case _ => {
+        println("unsubscribing"); working.unsubscribe()
+      }
+    }
+
+    Thread.sleep((3 seconds) toMillis)
+    assert(1 == 1)
+  }
+
   class DummyExchange(val request: Request) extends Exchange {
     @volatile var response = ""
     val loaded = Promise[String]()

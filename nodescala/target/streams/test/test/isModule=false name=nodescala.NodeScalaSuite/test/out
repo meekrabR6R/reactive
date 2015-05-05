@@ -6,16 +6,17 @@
 [0m[[0minfo[0m] [0m[32m- Future.delay have to finish when Await will wait[0m[0m
 [0m[[0minfo[0m] [0m[32m- Future.delay can't to finish when Await won't wait[0m[0m
 [0m[[0minfo[0m] [0m[32m- Calling 'now' on instances of Future could return the Future's value..[0m[0m
-[0m[[0minfo[0m] [0m[31m- continueWith should wait for the first future to complete *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  org.scalatest.exceptions.TestFailedException was thrown. (tests.scala:84)[0m[0m
+[0m[[0minfo[0m] [0m[32m- continueWith should wait for the first future to complete[0m[0m
+[0m[[0minfo[0m] [0m[32m- continue should wait for the first future to complete[0m[0m
+[0m[[0minfo[0m] [0m[32m- run[0m[0m
 [0m[[0minfo[0m] [0m[31m- Server should serve requests *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at nodescala.NodeScala$class.start(nodescala.scala:44)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyServer.start(tests.scala:134)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$16.apply$mcV$sp(tests.scala:152)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$16.apply(tests.scala:150)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$16.apply(tests.scala:150)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$DummyServer.start(tests.scala:167)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$18.apply$mcV$sp(tests.scala:185)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$18.apply(tests.scala:183)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at nodescala.NodeScalaSuite$$anonfun$18.apply(tests.scala:183)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m

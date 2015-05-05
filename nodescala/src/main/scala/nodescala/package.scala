@@ -65,7 +65,11 @@ package object nodescala {
 
     /** Creates a cancellable context for an execution and runs it.
      */
-    def run()(f: CancellationToken => Future[Unit]): Subscription = ???
+    def run()(f: CancellationToken => Future[Unit]): Subscription = {
+      val ctSource = CancellationTokenSource()
+      f(ctSource.cancellationToken)
+      ctSource
+    }
 
   }
 
@@ -97,7 +101,7 @@ package object nodescala {
      *  The function `cont` is called only after the current future completes.
      *  The resulting future contains a value returned by `cont`.
      */
-    def continue[S](cont: Try[T] => S): Future[S] = ???
+    def continue[S](cont: Try[T] => S): Future[S] = f.flatMap(t => Future(cont(Try(t))))
 
   }
 
