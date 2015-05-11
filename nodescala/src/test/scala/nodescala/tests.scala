@@ -72,7 +72,7 @@ class NodeScalaSuite extends FunSuite {
     assert(f.now == 2)
 
     val delay = Future.delay(5 seconds)
-    intercept[TimeoutException] { delay.now }
+    intercept[NoSuchElementException] { delay.now }
   }
 
   test("continueWith should wait for the first future to complete") {
@@ -115,6 +115,30 @@ class NodeScalaSuite extends FunSuite {
     }
     cts.unsubscribe()
     assert(Await.result(p.future, 1 second) == "done")
+  }
+
+  test("Server should be stoppable if receives infinite  response") {
+    val dummy = new DummyServer(8191)
+    val dummySubscription = dummy.start("/testDir") {
+      request => Iterator.continually("a")
+    }
+
+    // wait until server is really installed
+    Thread.sleep(500)
+
+    val webpage = dummy.emit("/testDir", Map("Any" -> List("thing")))
+    try {
+      // let's wait some time
+      Await.result(webpage.loaded.future, 1 second)
+      fail("infinite response ended")
+    } catch {
+      case e: TimeoutException =>
+    }
+
+    // stop everything
+    dummySubscription.unsubscribe()
+    Thread.sleep(500)
+    webpage.loaded.future.now // should not get NoSuchElementException
   }
 
   class DummyExchange(val request: Request) extends Exchange {

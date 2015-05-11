@@ -10,6 +10,7 @@ import scala.collection.JavaConversions._
 import java.util.concurrent.{Executor, ThreadPoolExecutor, TimeUnit, LinkedBlockingQueue}
 import com.sun.net.httpserver.{HttpExchange, HttpHandler, HttpServer}
 import java.net.InetSocketAddress
+import scala.util.control.Breaks._
 
 /** Contains utilities common to the NodeScala© framework.
  */
@@ -30,12 +31,13 @@ trait NodeScala {
    *  @param body         the response to write back
    */
   private def respond(exchange: Exchange, token: CancellationToken, response: Response): Unit = {
-    if (response.hasNext && token.nonCancelled) {
-      exchange.write(response.next())
-      respond(exchange, token, response)
-    } else {
-      exchange.close()
+    breakable {
+      for (r <- response) {
+        exchange.write(r)
+        if (token.isCancelled) break
+      }
     }
+    exchange.close
   }
 
   /** A server:
@@ -50,17 +52,21 @@ trait NodeScala {
    */
   def start(relativePath: String)(handler: Request => Response): Subscription = {
     val listener = createListener(relativePath)
-    val listenerSubscription = listener.start()
-
-    Future.run() { ct =>
+    val listenerSub = listener.start
+    val requestSub = Future.run() { ct =>
       Future {
-        while (ct.nonCancelled) {
-          listener.nextRequest().onComplete(t => respond(t.get._2, ct, handler(t.get._1)))
+        async {
+          while (ct.nonCancelled) {
+            val reqExch = await { listener.nextRequest }
+            val request = reqExch._1
+            val exchange = reqExch._2
+            val response = handler(request)
+            respond(exchange, ct, response)
+          }
         }
       }
     }
-
-    listenerSubscription
+    Subscription(listenerSub, requestSub)
   }
 
 }
