@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c988d15-d08b-4b70-8022-07c0943325c8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$4f810430c71e67dc66cc$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$4f810430c71e67dc66cc.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$4f810430c71e67dc66cc.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$f05b42cc07bd449cba5c$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$f05b42cc07bd449cba5c.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$f05b42cc07bd449cba5c.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/suggestions/SwingApiTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/suggestions/SwingApiTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
     </list>
     <ignored path="suggestions.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +35,8 @@
       <file leaf-file-name="SwingApi.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7081712" vertical-offset="686" max-vertical-offset="1200">
-              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.76653695" vertical-offset="701" max-vertical-offset="1260">
+              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
               <folding>
                 <element signature="e#33#51#0" expanded="true" />
               </folding>
@@ -716,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7081712" vertical-offset="686" max-vertical-offset="1200">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.76653695" vertical-offset="701" max-vertical-offset="1260">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
           <folding>
             <element signature="e#33#51#0" expanded="true" />
           </folding>
