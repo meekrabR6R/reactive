@@ -1,17 +1,5 @@
 [0m[[0minfo[0m] [0m[32mWikipediaApiTest:[0m[0m
-[0m[[0minfo[0m] [0m[31m- WikipediaApi should make the stream valid using sanitized *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.gui.WikipediaApi$StringObservableOps.sanitized(WikipediaApi.scala:40)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$1.apply$mcV$sp(WikipediaApiTest.scala:38)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$1.apply(WikipediaApiTest.scala:36)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$1.apply(WikipediaApiTest.scala:36)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- WikipediaApi should make the stream valid using sanitized[0m[0m
 [0m[[0minfo[0m] [0m[31m- WikipediaApi should correctly use concatRecovered *** FAILED ***[0m[0m
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
