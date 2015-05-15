@@ -4,12 +4,13 @@
 [0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
 [0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at suggestions.gui.WikipediaApi$ObservableOps.concatRecovered(WikipediaApi.scala:86)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply$mcV$sp(WikipediaApiTest.scala:56)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:53)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:53)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply$mcV$sp(WikipediaApiTest.scala:55)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:52)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:52)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
 [0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
 [0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- WikipediaApi should properly recover[0m[0m

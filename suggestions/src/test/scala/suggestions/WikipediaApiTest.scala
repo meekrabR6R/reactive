@@ -1,8 +1,8 @@
 package suggestions
 
 
-
 import language.postfixOps
+import scala.collection.mutable
 import scala.concurrent._
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -41,7 +41,6 @@ class WikipediaApiTest extends FunSuite {
 
     val sub = valid.subscribe(
       term => {
-        println(term)
         assert(term.forall(_ != ' '))
         count += 1
       },
@@ -65,6 +64,20 @@ class WikipediaApiTest extends FunSuite {
       s => total = s
     }
     assert(total == (1 + 1 + 2 + 1 + 2 + 3), s"Sum: $total")
+  }
+
+  test("WikipediaApi should properly recover") {
+    val thrw = new Throwable
+    val failedObservable = Observable.just(1, 2, 3) ++ Observable.error(thrw)
+
+    val recoveredObserable = failedObservable.recovered
+    val observed = mutable.Buffer[Any]()
+
+    val sub = recoveredObserable subscribe {
+      observed += _
+    }
+
+    assert(observed == Seq(Success(1), Success(2), Success(3), Failure(thrw)), observed)
   }
 
 }
