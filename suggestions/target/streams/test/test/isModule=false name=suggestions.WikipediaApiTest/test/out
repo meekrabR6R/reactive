@@ -1,16 +1,7 @@
 [0m[[0minfo[0m] [0m[32mWikipediaApiTest:[0m[0m
 [0m[[0minfo[0m] [0m[32m- WikipediaApi should make the stream valid using sanitized[0m[0m
-[0m[[0minfo[0m] [0m[31m- WikipediaApi should correctly use concatRecovered *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.gui.WikipediaApi$ObservableOps.concatRecovered(WikipediaApi.scala:86)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply$mcV$sp(WikipediaApiTest.scala:55)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:52)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at suggestions.WikipediaApiTest$$anonfun$3.apply(WikipediaApiTest.scala:52)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- WikipediaApi should correctly use concatRecovered[0m[0m
 [0m[[0minfo[0m] [0m[32m- WikipediaApi should properly recover[0m[0m
+[0m[[0minfo[0m] [0m[32m- Observable should complete before timeout[0m[0m
+[0m[[0minfo[0m] [0m[32m- Observable(1, 2, 3).zip(Observable.interval(400 millis)).timedOut(1L) should return the first two values, and complete without errors[0m[0m
+[0m[[0minfo[0m] [0m[32m- Observable(1, 2, 3).zip(Observable.interval(700 millis)).timedOut(1L) should return the first value, and complete without errors[0m[0m

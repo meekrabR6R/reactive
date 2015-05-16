@@ -49,6 +49,7 @@ class WikipediaApiTest extends FunSuite {
     )
     assert(completed && count == 3, "completed: " + completed + ", event count: " + count)
   }
+
   test("WikipediaApi should correctly use concatRecovered") {
     val requests = Observable.just(1, 2, 3)
     val remoteComputation = (n: Int) => Observable.just(0 to n : _*)
@@ -78,6 +79,27 @@ class WikipediaApiTest extends FunSuite {
     }
 
     assert(observed == Seq(Success(1), Success(2), Success(3), Failure(thrw)), observed)
+  }
+
+  test("Observable should complete before timeout") {
+    val start = System.currentTimeMillis
+    val timedOutStream = Observable.from(1 to 3).zip(Observable.interval(100 millis)).timedOut(3L)
+    val contents = timedOutStream.toBlocking.toList
+    val totalTime = System.currentTimeMillis - start
+    assert(contents == List((1,0),(2,1),(3,2)))
+    assert(totalTime <= 1000)
+  }
+
+  test("Observable(1, 2, 3).zip(Observable.interval(400 millis)).timedOut(1L) should return the first two values, and complete without errors") {
+    val timedOutStream = Observable.from(1 to 3).zip(Observable.interval(400 millis)).timedOut(1L)
+    val contents = timedOutStream.toBlocking.toList
+    assert(contents == List((1,0),(2,1)))
+  }
+
+  test("Observable(1, 2, 3).zip(Observable.interval(700 millis)).timedOut(1L) should return the first value, and complete without errors") {
+    val timedOutStream = Observable.from(1 to 3).zip(Observable.interval(700 millis)).timedOut(1L)
+    val contents = timedOutStream.toBlocking.toList
+    assert(contents == List((1,0)))
   }
 
 }
