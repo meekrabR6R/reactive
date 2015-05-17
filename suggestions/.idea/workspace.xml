@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c988d15-d08b-4b70-8022-07c0943325c8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$1$$anonfun$6$$anonfun$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$1$$anonfun$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$1$$anonfun$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3$$anonfun$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3$$anonfun$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$5$$anonfun$11.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3$$anonfun$4.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3$$anonfun$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$5.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest$$anonfun$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest.class" afterPath="$PROJECT_DIR$/target/scala-2.11/test-classes/suggestions/WikipediaApiTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala" afterPath="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/suggestions/WikipediaApiTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/suggestions/WikipediaApiTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile_2.11" afterPath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile_2.11" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compile/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/compile/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=suggestions.WikipediaApiTest/test/out" afterPath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=suggestions.WikipediaApiTest/test/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/suggestions.SwingApiTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/suggestions.SwingApiTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/suggestions.WikipediaApiTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/suggestions.WikipediaApiTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaSuggest.scala" afterPath="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaSuggest.scala" />
     </list>
     <ignored path="suggestions.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,30 +35,28 @@
       <file leaf-file-name="SwingApi.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="596" max-vertical-offset="1110">
+            <state vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1110">
               <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WikipediaApi.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala">
+      <file leaf-file-name="WikipediaSuggest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaSuggest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8592871" vertical-offset="817" max-vertical-offset="1455">
-              <caret line="85" column="109" selection-start-line="85" selection-start-column="109" selection-end-line="85" selection-end-column="109" />
-              <folding>
-                <element signature="e#33#65#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6622889" vertical-offset="1012" max-vertical-offset="2085">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WikipediaApiTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/suggestions/WikipediaApiTest.scala">
+      <file leaf-file-name="WikipediaApi.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.481482" vertical-offset="697" max-vertical-offset="1665">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
+            <state vertical-scroll-proportion="-2.2222223" vertical-offset="0" max-vertical-offset="1455">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -99,6 +75,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/suggestions/WikipediaApiTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaSuggest.scala" />
       </list>
     </option>
   </component>
@@ -787,14 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="596" max-vertical-offset="1110">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/package.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10714286" vertical-offset="0" max-vertical-offset="560">
@@ -805,19 +774,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/suggestions/WikipediaApiTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.481482" vertical-offset="697" max-vertical-offset="1665">
+        <state vertical-scroll-proportion="-1.1388367" vertical-offset="697" max-vertical-offset="1665">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/SwingApi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1110">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaApi.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8592871" vertical-offset="817" max-vertical-offset="1455">
-          <caret line="85" column="109" selection-start-line="85" selection-start-column="109" selection-end-line="85" selection-end-column="109" />
-          <folding>
-            <element signature="e#33#65#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-2.2222223" vertical-offset="0" max-vertical-offset="1455">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/suggestions/gui/WikipediaSuggest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6622889" vertical-offset="1012" max-vertical-offset="2085">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

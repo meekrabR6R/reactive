@@ -48,4 +48,3 @@
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread AWT-EventQueue-0 to terminate.[0m
-[0m[[31merror[0m] [0m(AWT-EventQueue-0) scala.NotImplementedError: an implementation is missing[0m
